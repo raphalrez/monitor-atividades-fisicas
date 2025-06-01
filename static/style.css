@@ -1,0 +1,198 @@
+/* Estilos CSS Profissionais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #2c3e50; /* Azul escuro acinzentado */
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 15px;
+    width: 45%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #34495e; /* Azul mais escuro */
+    border-bottom: 2px solid #007bff; /* Linha azul de destaque */
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%; /* O box-sizing cuidará do padding */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    background-color: #007bff; /* Azul primário */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #0056b3; /* Azul mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #f1f1f1;
+}
+
+ul li .delete-btn {
+    background-color: #dc3545; /* Vermelho perigo */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+ul li .delete-btn:hover {
+    background-color: #c82333; /* Vermelho mais escuro no hover */
+}
+
+.feedback-message {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 0.95em;
+    display: none; 
+    border: 1px solid transparent;
+}
+
+.feedback-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+    display: block;
+}
+
+.feedback-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+    display: block;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .section {
+        width: 95%;
+        margin: 15px 0;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin: 30px 0;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    form button {
+        width: 100%;
+        padding: 15px;
+    }
+} 

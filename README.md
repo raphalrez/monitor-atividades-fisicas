@@ -215,4 +215,4 @@ Contribuições são bem-vindas! Se você tiver sugestões ou encontrar problema
 
 ---
 
-_Desenvolvido como parte de um projeto de Aplicações Distribuídas._ 
+_Desenvolvido como parte de um projeto da Universidade para a graduação Ciencia da Computação._ 

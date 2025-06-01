@@ -1,8 +1,11 @@
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 from typing import List, Optional
 from datetime import date
+import os
 
 from .database import engine, Base, get_db
 from . import models, schemas, crud
@@ -29,9 +32,13 @@ app.add_middleware(
     allow_headers=["*"], # Permite todos os cabeçalhos
 )
 
+# Montar o diretório 'static' para servir arquivos CSS, JS, imagens, etc.
+# O path "/static" será o prefixo na URL para acessar esses arquivos.
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 @app.get("/")
-async def root():
-    return {"message": "API de Registro e Monitoramento de Atividades Físicas"}
+async def serve_index():
+    return FileResponse('static/index.html')
 
 # Endpoints para Atividades
 @app.post("/atividades/", response_model=schemas.Atividade)
